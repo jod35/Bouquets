@@ -1,0 +1,214 @@
+:root{
+    --blue:dodgerblue;
+    --white:white;
+    --gray:lightgray;
+
+}
+body{
+    font-family: sans-serif;
+    background-color:darkslategrey ;
+}
+li{
+    list-style-type: none;
+}
+.navbar{
+    background-color: var(--gray);
+    padding: 20px;
+    text-align: center;
+    text-transform: capitalize;
+    border-radius: 7px;
+}
+.options{
+    display: none;
+}
+.navbar li{
+    list-style-type: none;
+    display: inline;
+    padding: 20px;
+    width: 100px;
+}
+.navbar a{
+    text-decoration: none;
+    color: var(--blue);
+    padding: 20px;
+}
+
+
+.navbar li a:hover{
+    background-color: var(--white);
+    color: var(--blue);
+}
+header{
+    text-align: center;
+    color: white;
+    background-color: var(--blue);
+    padding: 5px;
+    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.521);
+    border-radius: 7px;
+}
+
+
+.container{
+    display: flex;
+    padding: 20px;
+    margin: 20px;
+}
+.card{
+    padding: 20px;
+    background-color:var(--blue);
+    color:var(--white) ;
+    text-align: center;
+    margin: 10px;
+    box-shadow: 5px 15px 15px 5px rgba(0, 0, 0, 0.521);
+    border-radius: 7px;
+    border:5px var(--white) solid;
+    
+}
+
+@keyframes show{
+    0%{
+        padding: 5px;
+        color: var(--white);
+        background-color: var(--blue);
+    }
+    50%{
+        padding: 20px;
+        color: lightblue;
+        background-color: var(--blue);
+    }
+
+    100%{
+        padding: 20px;
+        color:var(--blue);
+        background-color: var(--white);
+        border: 3px solid var(--blue);
+    }
+}
+.center{
+    /* transform: scale(1.15); */
+    height: 400px;
+    background-color: var(--white);
+    color: var(--blue);
+    border:5px var(--blue) solid;
+    animation-name: show-center;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes show-center{
+    0%{
+        padding: 20px;
+        background-color:var(--blue);
+        color:var(--white) ;
+        text-align: center;
+        margin: 10px;
+        box-shadow: 5px 15px 15px 5px rgba(0, 0, 0, 0.521);
+        border-radius: 7px;
+        border:5px var(--white) solid; 
+        transform: scale(1);      
+    }
+
+    50%{
+        padding: 20px;
+        background-color:var(--blue);
+        color:var(--white) ;
+        text-align: center;
+        margin: 10px;
+        box-shadow: 5px 15px 15px 5px rgba(0, 0, 0, 0.658);
+        border-radius: 7px;
+        border:5px var(--white) solid;
+        transform: scale(1.1);
+    }
+    100%{
+        transform: scale(1.15);
+        height: 400px;
+        background-color: var(--gray);
+        color: var(--blue);
+        border:5px var(--blue) solid;
+
+    }
+}
+
+.card h4{
+    font-size: 25px;
+}
+.button{
+    cursor: pointer;
+    border:none;
+    background-color: var(--blue);
+    color: var(--white);
+    padding: 20px;
+    border-radius: 7px;
+    text-transform: capitalize;
+    font-weight: bolder;
+
+}
+.button:hover{
+    animation-name: show;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+
+.price{
+    font-size: 40px;
+    text-align: center;
+}
+
+@media(max-width:600px){
+    header{
+        padding: 10px;
+        font-size: 16px;
+    }
+    .container{
+      display: block;
+      padding: 0;
+      margin: 0;
+    }
+
+    .card{
+        width: 80%;
+        margin-top: 20px;
+    }
+    .options{
+        text-align: center;
+        display: block;
+        padding: 20px;
+
+    }
+    
+    .options a{
+        text-decoration: none;
+        display: inline;
+        text-decoration: none;
+        list-style-type: none;
+        color: var(--white);
+        padding: 20px;
+
+    }
+    .options a:hover{
+        background-color: var(--white);
+        color: var(--blue);
+    }
+    .center{
+        animation-name: none;
+    }
+
+    .navbar{
+        display: none;
+        text-align: start;
+    }
+    .navbar li{
+        list-style-type: none;
+        display: block;
+        padding: 20px;
+        width: 100%;
+        
+    }
+    navbar a li:hover{
+        background-color: varchar(--white);
+    }
+    .navbar a{
+        
+    }
+}
